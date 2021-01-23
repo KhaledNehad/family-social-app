@@ -17,7 +17,12 @@ const Posts = () => {
       name: 'Jenny Hess',
       image: 'https://react.semantic-ui.com/images/avatar/large/stevie.jpg',
       date: '2021-01-22T12:59-0500',
-      post: "Have you seen what's going on in Egypt? Can you believe it."
+      post: "Have you seen what's going on in Egypt? Can you believe it.",
+      comments: {
+        username: 'Joe Henderson',
+        text:
+          'The hours, minutes and seconds stand as visible reminders that your effort put them all there.Preserve until your next run, when the watch lets you see how Impermanent your efforts are.'
+      }
     }
   ]);
 

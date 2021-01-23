@@ -1,14 +1,7 @@
 import React from 'react';
-import {
-  Button,
-  Feed,
-  Image,
-  Item,
-  Label,
-  Rating,
-  Segment
-} from 'semantic-ui-react';
+import { Item, Label, Rating, Segment } from 'semantic-ui-react';
 import Moment from 'react-moment';
+import Comments from './Comments';
 
 const PostListItem = ({ post }) => {
   return (
@@ -35,6 +28,9 @@ const PostListItem = ({ post }) => {
           </Item.Content>
         </Item>
       </Item.Group>
+      <Segment>
+        <Comments />
+      </Segment>
     </Segment>
   );
 };
