@@ -1,0 +1,45 @@
+import React, { useState } from 'react';
+import { Divider } from 'semantic-ui-react';
+import AddPost from './AddPost';
+import PostsList from './PostsList';
+
+const Posts = () => {
+  const [posts, setPosts] = useState([
+    {
+      id: 10,
+      name: 'Jenny Hess',
+      image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
+      date: '2021-01-21T12:59-0500',
+      post: "Have you seen what's going on in Egypt? Can you believe it."
+    },
+    {
+      id: 11,
+      name: 'Jenny Hess',
+      image: 'https://react.semantic-ui.com/images/avatar/large/stevie.jpg',
+      date: '2021-01-22T12:59-0500',
+      post: "Have you seen what's going on in Egypt? Can you believe it."
+    }
+  ]);
+
+  const addPost = (post) => {
+    const id = Math.floor(Math.random() * 1000) + 1;
+    const date = Date();
+    const newPost = {
+      ...post,
+      id,
+      date,
+      name: 'Khaled Nehad',
+      image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg'
+    };
+    setPosts([newPost, ...posts]);
+  };
+  return (
+    <>
+      <AddPost onAdd={addPost} />
+      <Divider section />
+      <PostsList posts={posts} />
+    </>
+  );
+};
+
+export default Posts;
