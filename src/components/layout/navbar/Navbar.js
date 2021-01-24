@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Icon, Image, Menu, Segment } from 'semantic-ui-react';
+import { Menu, Segment } from 'semantic-ui-react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
 import './Navbar.css';

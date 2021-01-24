@@ -23,14 +23,18 @@ const PostListItem = ({ post }) => {
             <Item.Description>{post.post}</Item.Description>
             <Item.Extra floated='right'>
               <Rating icon='heart' />
-              <Label>Comment</Label>
+              <Label> Comment</Label>
             </Item.Extra>
           </Item.Content>
         </Item>
       </Item.Group>
-      <Segment>
-        <Comments />
-      </Segment>
+      {post.comments.length > 0 ? (
+        <Segment>
+          <Comments comments={post.comments} />
+        </Segment>
+      ) : (
+        ''
+      )}
     </Segment>
   );
 };
