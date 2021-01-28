@@ -30,7 +30,7 @@ const PostListItem = ({ post }) => {
       </Item.Group>
       {post.comments.length > 0 ? (
         <Segment>
-          <Comments comments={post.comments} />
+          <Comments commentsList={post.comments} />
         </Segment>
       ) : (
         ''

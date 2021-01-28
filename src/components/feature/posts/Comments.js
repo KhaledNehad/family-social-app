@@ -1,10 +1,10 @@
 import React from 'react';
 import { Comment, Divider } from 'semantic-ui-react';
 
-const Comments = ({ comments }) => {
+const Comments = ({ commentsList }) => {
   return (
     <Comment.Group>
-      {comments.map((comment) => {
+      {commentsList.map((comment) => {
         return (
           <Comment key={comment.id}>
             <Comment.Avatar as='a' src={comment.userImage} />

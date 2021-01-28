@@ -4,7 +4,7 @@ import AddPost from './AddPost';
 import PostsList from './PostsList';
 
 const Posts = () => {
-  const [posts, setPosts] = useState([
+  const initPosts = [
     {
       id: 10,
       name: 'Jenny Hess',
@@ -40,7 +40,8 @@ const Posts = () => {
         }
       ]
     }
-  ]);
+  ];
+  const [posts, setPosts] = useState(initPosts);
 
   const addPost = (post) => {
     const id = Math.floor(Math.random() * 1000) + 1;
@@ -50,7 +51,8 @@ const Posts = () => {
       id,
       date,
       name: 'Khaled Nehad',
-      image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg'
+      image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
+      comments: []
     };
     setPosts([newPost, ...posts]);
   };

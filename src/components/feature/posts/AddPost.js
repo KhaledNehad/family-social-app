@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Form, Message } from 'semantic-ui-react';
 
 const AddPost = ({ onAdd }) => {
@@ -19,8 +19,6 @@ const AddPost = ({ onAdd }) => {
       setPost('');
     }
   };
-
-  useEffect(() => {}, []);
 
   return (
     <Form success onSubmit={handleSubmit}>
